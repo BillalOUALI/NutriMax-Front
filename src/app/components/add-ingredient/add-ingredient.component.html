@@ -1,0 +1,16 @@
+<div class="add-ingredient-container">
+    <h2>Ajouter un Ingrédient</h2>
+    <input [(ngModel)]="ingredientName" placeholder="Rechercher un ingrédient" />
+    <button (click)="searchIngredient()">Rechercher</button>
+  
+    <div *ngIf="nutritionalInfo">
+      <h3>Informations Nutritionnelles</h3>
+      <p>Calories: {{ nutritionalInfo.calories }}</p>
+      <p>Protéines: {{ nutritionalInfo.proteins }}</p>
+      <p>Glucides: {{ nutritionalInfo.carbohydrates }}</p>
+      <p>Lipides: {{ nutritionalInfo.fats }}</p>
+    </div>
+  
+    <input type="number" [(ngModel)]="quantity" placeholder="Quantité en grammes" />
+    <button (click)="addIngredient()">Ajouter</button>
+  </div>

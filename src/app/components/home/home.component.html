@@ -1,0 +1,9 @@
+<div class="home-container">
+  <h1>Mes Recettes</h1>
+  <ul>
+    <li *ngFor="let recipe of recipes">
+      {{ recipe.name }} - Calories: {{ recipe.calories }} - Joules: {{ recipe.joules }}
+    </li>
+  </ul>
+  <button (click)="createRecipe()">Créer une Recette</button>
+</div>

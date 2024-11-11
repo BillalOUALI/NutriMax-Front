@@ -33,8 +33,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-add-ingredient',
-  standalone: true,
-  imports: [FormsModule, CommonModule], // Ajout de FormsModule ici
+  standalone: false,
+  //imports: [FormsModule, CommonModule], // Ajout de FormsModule ici
   templateUrl: './add-ingredient.component.html',
   styleUrl: './add-ingredient.component.scss'
 })

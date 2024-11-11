@@ -1,4 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Import Angular Material theming functions and mixins */
+// @use '@angular/material' as mat;
+
+// /* Include the core styles required for Angular Material components */
+// @include mat.core();
+
+// /* Define your custom theme */
+// $primary-palette: mat.$blue-palette;
+// $accent-palette: mat.$green-palette;
+// $warn-palette: mat.$red-palette;
+
+// $theme: mat.define-theme((
+//   color: (
+//     primary: $primary-palette,
+//     accent: $accent-palette,
+//     warn: $warn-palette,
+//   ),
+// ));
+
+// /* Include the theme styles */
+// @include mat.all-component-themes($theme);
+
+// /* Global styles */
+// html, body {
+//   height: 100%;
+// }
+
+// body {
+//   margin: 0;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
+// }
+
+
+
+
+
+
+
+
+
+
+
+//defining custom theme
+// @use '@angular/material' as mat;
+
+// $theme: mat.define-theme((
+//   color: (
+//     theme-type: dark,
+//     primary: mat.$violet-palette,
+//   ),
+//   typography: (
+//     brand-family: 'Comic Sans',
+//     bold-weight: 900
+//   ),
+//   density: (
+//     scale: -1
+//   )
+// ));
+
+// /* Include the theme styles wrapped in a selector */
+// .my-app-theme {
+//     @include mat.all-component-themes($theme);
+//   }
+  
+//   /* Global styles */
+//   html, body {
+//     height: 100%;
+//   }
+  
+//   body {
+//     margin: 0;
+//     font-family: 'Comic Sans', sans-serif;
+//   }
+
+
+  // importing pre-built theme
+  /* Import the pre-built theme */
+// @import '~@angular/material/prebuilt-themes/magenta-violet.css';
+
+// /* Global styles */
+// html, body {
+//   height: 100%;
+// }
+
+// body {
+//   margin: 0;
+//   font-family: 'Comic Sans', sans-serif;
+// }

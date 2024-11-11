@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-recipe',
-  standalone: true,
-  imports: [CommonModule],
+  standalone: false,
   templateUrl: './create-recipe.component.html',
   styleUrl: './create-recipe.component.scss'
 })

@@ -8,6 +8,7 @@ import { HomeComponent } from '../home/home.component';
 import { LoginComponent } from '../login/login.component';
 import { CreateRecipeComponent } from '../create-recipe/create-recipe.component';
 import { AddIngredientComponent } from '../add-ingredient/add-ingredient.component';
+import { NavigationComponent } from '../../navigation/navigation.component';
 
 
 /**
@@ -38,13 +39,14 @@ import { AddIngredientComponent } from '../add-ingredient/add-ingredient.compone
     HomeComponent,
     LoginComponent,
     CreateRecipeComponent,
-    AddIngredientComponent
+    AddIngredientComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    NavigationComponent
   ],
   exports: [
     HomeComponent,

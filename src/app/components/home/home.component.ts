@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RecipeService } from '../../shared/recipe.service';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
@@ -11,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  
   recipes: any[] = [];
 
   constructor(private recipeService: RecipeService, private authService: AuthService, private router: Router) {
@@ -38,4 +38,12 @@ export class HomeComponent {
   createRecipe() {
     this.router.navigate(['/create-recipe']);
   }
+
+  editRecipe(recipeId: number) {  
+    this.router.navigate(['/create-recipe'], { queryParams: { recipeId } });
+  } 
+
+  deleteRecipe(recipeId: number) {
+    console.log('Deleting recipe with id:', recipeId);
+  } 
 }

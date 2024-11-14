@@ -46,4 +46,10 @@ export class RecipeService {
 
     return summary;
   }
+
+  // Supprimer une recette
+  deleteRecipe(index: number) {
+    this.recipes.splice(index, 1);
+    return index;
+  } 
 }

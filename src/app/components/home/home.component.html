@@ -1,9 +1,28 @@
 <div class="home-container">
-  <h1>Mes Recettes</h1>
-  <ul>
-    <li *ngFor="let recipe of recipes">
-      {{ recipe.name }} - Calories: {{ recipe.calories }} - Joules: {{ recipe.joules }}
-    </li>
-  </ul>
+  <mat-card>
+    <h1>Mes Recettes</h1>
+  </mat-card>
+<mat-list>
+  <mat-list-item *ngFor="let recipe of recipes">
+
+    <span matListItemTitle>
+      {{ recipe.name }}
+    </span>
+    <span matListItemLine>
+      Calories: {{ recipe.calories }}  Joules: {{ recipe.joules }} Protéines: {{ recipe.macros.proteins }} Glucides: {{ recipe.macros.carbs }} Lipides: {{ recipe.macros.fats }} 
+      <button mat-icon-button color="primary" (click)="editRecipe(recipe.recipeId.recipeId)" aria-label="Modifier">
+        <mat-icon>edit</mat-icon> 
+      </button>
+      <button mat-icon-button color="tertiary" (click)="deleteRecipe(recipe.recipeId.recipeId)" aria-label="Supprimer">
+        <mat-icon>delete</mat-icon> 
+      </button>
+
+      
+
+
+    </span>
+  </mat-list-item>  
+</mat-list>
+
   <button (click)="createRecipe()">Créer une Recette</button>
 </div>

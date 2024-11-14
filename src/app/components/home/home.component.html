@@ -4,7 +4,6 @@
   </mat-card>
 <mat-list>
   <mat-list-item *ngFor="let recipe of recipes">
-
     <span matListItemTitle>
       {{ recipe.name }}
     </span>
@@ -16,13 +15,41 @@
       <button mat-icon-button color="tertiary" (click)="deleteRecipe(recipe.recipeId.recipeId)" aria-label="Supprimer">
         <mat-icon>delete</mat-icon> 
       </button>
-
       
 
 
-    </span>
-  </mat-list-item>  
-</mat-list>
+      <!-- 
+        This section defines a Material Design menu and a button to trigger it.
 
+        - <mat-menu #menu="matMenu">: Declares a Material Design menu with a template reference variable 'menu'.
+          - <button mat-menu-item (click)="editRecipe(recipe.recipeId.recipeId)">: A menu item button that triggers the 'editRecipe' method with the recipe's ID when clicked.
+            - <mat-icon>edit</mat-icon>: Displays an edit icon.
+            - <p>Modifier</p>: Displays the text "Modifier" (French for "Edit").
+          - <button mat-menu-item (click)="deleteRecipe(recipe.recipeId.recipeId)">: A menu item button that triggers the 'deleteRecipe' method with the recipe's ID when clicked.
+            - <mat-icon>delete</mat-icon>: Displays a delete icon.
+            - <p>Supprimer</p>: Displays the text "Supprimer" (French for "Delete").
+
+        - <button mat-button [matMenuTriggerFor]="menu">: A button that triggers the display of the menu when clicked.
+          - <mat-icon>more_vert</mat-icon>: Displays a vertical ellipsis icon indicating more options.
+      -->
+      <!-- <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="editRecipe(recipe.recipeId.recipeId)">
+          <mat-icon>edit</mat-icon> 
+          <p>Modifier</p>
+        </button>
+        <button mat-menu-item (click)="deleteRecipe(recipe.recipeId.recipeId)" >
+          <mat-icon>delete</mat-icon> 
+          <p>Supprimer</p>
+        </button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon> 
+      </button> -->
+
+
+    </span>
+  </mat-list-item> 
+  
+</mat-list>
   <button (click)="createRecipe()">Créer une Recette</button>
 </div>

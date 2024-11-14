@@ -9,6 +9,7 @@ import { LoginComponent } from '../login/login.component';
 import { CreateRecipeComponent } from '../create-recipe/create-recipe.component';
 import { AddIngredientComponent } from '../add-ingredient/add-ingredient.component';
 import { NavigationComponent } from '../../navigation/navigation.component';
+import { AppComponent } from '../../app.component';
 
 
 /**
@@ -40,19 +41,20 @@ import { NavigationComponent } from '../../navigation/navigation.component';
     LoginComponent,
     CreateRecipeComponent,
     AddIngredientComponent,
+    NavigationComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    NavigationComponent
   ],
   exports: [
     HomeComponent,
     LoginComponent,
     CreateRecipeComponent,
-    AddIngredientComponent
+    AddIngredientComponent,
+    NavigationComponent
   ]
 })
 export class SharedModule { }
